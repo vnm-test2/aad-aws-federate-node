@@ -50,7 +50,8 @@ class AzureADRefreshingCredential  {
         this.creds = creds;
         var delay = this.tokenExpiry  - Date.now();
         if (delay < ONE_MINUTE_DELAY) delay = ONE_MINUTE_DELAY;
-        setTimeout(this.tokenRefresh, delay);
+        logger.info("no refresh set");
+        //setTimeout(this.tokenRefresh, delay);
     }
 
     private tokenRefresh = async() =>{
