@@ -17,7 +17,7 @@
 # For more samples to get started with GitHub Action workflows to deploy to Azure, refer to https://github.com/Azure/actions-workflow-samples
 on:
   push:
-    branches: [ useapp ]
+    branches: [ main ]
 env:
   AZURE_WEBAPP_NAME: aad-aws-federate-app    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
