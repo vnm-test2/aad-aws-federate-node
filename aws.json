@@ -1,0 +1,36 @@
+{ 
+    "Version":"2012-10-17", 
+    "Statement": [ 
+        { 
+            "Effect":"Allow", 
+            "Principal": { 
+                "Federated":"arn:aws:iam::<awsAccountId>:oidc-provider/sts.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47/" 
+            }, 
+            "Action":"sts:AssumeRoleWithWebIdentity", 
+            "Condition": { 
+                "ForAllValues:StringEquals": { 
+                    "sts.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47/:aud":"api://5e1a13d2-0a13-483c-97f8-7420c00d7449" 
+                } 
+            } 
+        } 
+    ] 
+}
+
+{ 
+    "Version":"2012-10-17", 
+    "Statement": [ 
+        { 
+            "Effect":"Allow", 
+            "Principal": { 
+                "Federated":"arn:aws:iam::<awsAccountId>:oidc-provider/sts.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47/" 
+            }, 
+            "Action":"sts:AssumeRoleWithWebIdentity", 
+            "Condition": { 
+                "ForAllValues:StringEquals": { 
+                    "sts.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47/:aud":"f82b4845-704c-485a-a44d-6ef1a02e795f" 
+                } 
+            } 
+        } 
+    ] 
+} 
+
