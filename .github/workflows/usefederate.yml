@@ -31,7 +31,6 @@ jobs:
     name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
-
       - name: Installing CLI-beta for OIDC
           run: |
             CWD="$(pwd)"  
