@@ -32,16 +32,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Installing CLI-beta for OIDC
-          run:
-            CWD="$(pwd)"  
-            python3 -m venv oidc-venv
-            . oidc-venv/bin/activate
-            echo "activated environment" 
-            python3 -m pip install -q --upgrade pip
-            echo "started installing cli beta" 
-            pip install -q --extra-index-url https://azurecliedge.blob.core.windows.net/federated-token/simple/ azure-cli
-            echo "***************installed cli beta*******************" 
-            echo "$CWD/oidc-venv/bin" >> $GITHUB_PATH
+        run:
+          CWD="$(pwd)"
+          python3 -m venv oidc-venv
+          . oidc-venv/bin/activate
+          echo "activated environment"
+          python3 -m pip install -q --upgrade pip
+          echo "started installing cli beta" 
+          pip install -q --extra-index-url https://azurecliedge.blob.core.windows.net/federated-token/simple/ azure-cli
+          echo "***************installed cli beta*******************"
+          echo "$CWD/oidc-venv/bin" >> $GITHUB_PATH
   
       - name: 'Az CLI login'
         uses: azure/login@oidc-support
