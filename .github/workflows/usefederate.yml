@@ -18,6 +18,7 @@
 on:
   push:
     branches: [ github-fed ]
+  workflow_dispatch:
 
 permissions:
       id-token: write
